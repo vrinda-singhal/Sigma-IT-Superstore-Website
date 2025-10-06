@@ -72,18 +72,18 @@
             </div>
         </section>
 
-        <!-- Brands Section -->
+        <!-- Brands Section - UPDATED -->
         <section class="py-12 bg-white">
             <div class="container mx-auto px-6">
                 <h3 class="text-center text-2xl font-semibold text-slate-700 mb-8">We Deal in All Major Brands</h3>
                 <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png" alt="HP Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/2048px-Dell_Logo.svg.png" alt="Dell Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Lenovo-Logo-2015-present.svg/2560px-Lenovo-Logo-2015-present.svg.png" alt="Lenovo Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Asus_logo.svg/2560px-Asus_logo.svg.png" alt="ASUS Logo" class="h-12 grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSI_Logo.svg/2560px-MSI_Logo.svg.png" alt="MSI Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Acer_Logo.svg/2560px-Acer_Logo.svg.png" alt="Acer Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="hp-logo.png" alt="HP Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="dell-logo.png" alt="Dell Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="lenovo-logo.png" alt="Lenovo Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="asus-logo.png" alt="ASUS Logo" class="h-12 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="msi-logo.png" alt="MSI Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="samsung-logo.png" alt="Samsung Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="acer-logo.png" alt="Acer Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
                 </div>
             </div>
         </section>
@@ -349,22 +349,24 @@
     let activeCategory = 'all';
     let activeBrand = 'all';
     
-    // --- NEW: Function to check for image existence ---
+    // Function to check for image existence and return the correct path
     async function getImagePath(imageBase) {
         const extensions = ['png', 'jpg', 'jpeg'];
         for (const ext of extensions) {
             const path = `${imageBase}.${ext}`;
             try {
+                // This 'HEAD' request is a lightweight way to check if a file exists without downloading it.
+                // It works reliably on services like GitHub Pages where files are served from the same origin.
                 const response = await fetch(path, { method: 'HEAD' });
                 if (response.ok) {
                     return path;
                 }
             } catch (error) {
-                // This will fail for cross-origin requests, but works for same-origin on GitHub Pages
-                console.warn(`Could not check for ${path}. Assuming it doesn't exist.`, error);
+                // This catch block handles potential network errors, but we can safely ignore them.
+                // If a fetch fails, it simply means the file with that extension wasn't found.
             }
         }
-        // Fallback placeholder if no image is found
+        // Fallback placeholder if no image with any extension is found
         return `https://placehold.co/400x300/e2e8f0/333?text=${imageBase.replace(/-/g, '+')}`;
     }
 
@@ -383,6 +385,7 @@
             return;
         }
 
+        // Use Promise.all to wait for all image paths to be resolved before rendering
         const productCardsHtml = await Promise.all(filteredProducts.map(async (product) => {
             const imagePath = await getImagePath(product.imageBase);
             return `
