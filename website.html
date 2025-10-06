@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigma IT Superstore - Laptops, Mobiles, & More in Lucknow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1600x800/e2e8f0/1e293b?text=Featured+Laptops');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- Sigma Logo -->
+                <img src="image_73448d.png" alt="Sigma IT Superstore Logo" class="h-10">
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-slate-600 hover:text-orange-500">Home</a>
+                <a href="#products" class="text-slate-600 hover:text-orange-500">Products</a>
+                <a href="#about" class="text-slate-600 hover:text-orange-500">About Us</a>
+                <a href="#directors" class="text-slate-600 hover:text-orange-500">Directors</a>
+                <a href="#contact" class="text-slate-600 hover:text-orange-500">Contact & Support</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4 space-y-2">
+            <a href="#home" class="block text-slate-600 hover:text-orange-500">Home</a>
+            <a href="#products" class="block text-slate-600 hover:text-orange-500">Products</a>
+            <a href="#about" class="block text-slate-600 hover:text-orange-500">About Us</a>
+            <a href="#directors" class="block text-slate-600 hover:text-orange-500">Directors</a>
+            <a href="#contact" class="block text-slate-600 hover:text-orange-500">Contact & Support</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg text-white h-[60vh] flex items-center">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Your One-Stop Tech Shop in Lucknow</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-3xl mx-auto">Discover the latest Laptops, Mobiles, and Accessories from all major brands.</p>
+                <a href="#products" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300">Explore Products</a>
+            </div>
+        </section>
+
+        <!-- Brands Section -->
+        <section class="py-12 bg-white">
+            <div class="container mx-auto px-6">
+                <h3 class="text-center text-2xl font-semibold text-slate-700 mb-8">We Deal in All Major Brands</h3>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png" alt="HP Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Dell_Logo.svg/2048px-Dell_Logo.svg.png" alt="Dell Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Lenovo-Logo-2015-present.svg/2560px-Lenovo-Logo-2015-present.svg.png" alt="Lenovo Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Asus_logo.svg/2560px-Asus_logo.svg.png" alt="ASUS Logo" class="h-12 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/MSI_Logo.svg/2560px-MSI_Logo.svg.png" alt="MSI Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png" alt="Samsung Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Acer_Logo.svg/2560px-Acer_Logo.svg.png" alt="Acer Logo" class="h-10 grayscale hover:grayscale-0 transition duration-300">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Products Section -->
+        <section id="products" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-6">Our Products</h2>
+                <!-- Category Filters -->
+                <div class="flex justify-center mb-4">
+                    <div class="flex space-x-2 md:space-x-4 bg-white p-2 rounded-full shadow-sm">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="laptop">Laptops</button>
+                        <button class="filter-btn" data-filter="mobile">Mobiles</button>
+                        <button class="filter-btn" data-filter="printer">Printers</button>
+                        <button class="filter-btn" data-filter="accessory">Accessories</button>
+                    </div>
+                </div>
+                <!-- Brand Filters -->
+                 <div class="flex justify-center mb-10">
+                    <div class="flex flex-wrap justify-center gap-2 bg-white p-2 rounded-full shadow-sm">
+                        <button class="brand-filter-btn active" data-brand="all">All Brands</button>
+                        <button class="brand-filter-btn" data-brand="HP">HP</button>
+                        <button class="brand-filter-btn" data-brand="Dell">Dell</button>
+                        <button class="brand-filter-btn" data-brand="Lenovo">Lenovo</button>
+                        <button class="brand-filter-btn" data-brand="ASUS">ASUS</button>
+                        <button class="brand-filter-btn" data-brand="MSI">MSI</button>
+                        <button class="brand-filter-btn" data-brand="Samsung">Samsung</button>
+                        <button class="brand-filter-btn" data-brand="Acer">Acer</button>
+                        <button class="brand-filter-btn" data-brand="Apple">Apple</button>
+                    </div>
+                </div>
+
+                <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                    <!-- Product items will be injected here by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">About Sigma IT Superstore</h2>
+                        <p class="mb-4">Established in 1995, and founded with the mission to bring the latest technology to Lucknow, Sigma IT Superstore is a leading retail chain of Brand Exclusive Stores. With around 25 store locations across Lucknow, we pride ourselves on being a one-stop-shop for all your IT needs, offering a vast collection of Laptops, Mobiles, Printers, and Accessories.</p>
+                        <p class="mb-6">Our strength lies in our partnerships with top brands and our commitment to customer satisfaction. Our knowledgeable staff are always on hand to provide expert advice, ensuring you find the perfect product to meet your needs.</p>
+                        <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full transition duration-300">Get In Touch</a>
+                    </div>
+                    <div>
+                        <img src="https://placehold.co/600x400/334155/f1f5f9?text=Our+Storefront" alt="Sigma IT Superstore" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directors Section -->
+        <section id="directors" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-12">Meet Our Directors</h2>
+                <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                    <!-- Vikas Singhal -->
+                    <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
+                        <img src="vikas-singhal.png" alt="Mr. Vikas Singhal" class="w-40 h-40 rounded-full mb-4 object-cover border-4 border-orange-200" onerror="this.src='https://placehold.co/160x160/e2e8f0/333?text=V.S.'">
+                        <h3 class="text-2xl font-semibold text-slate-800">Mr. Vikas Singhal</h3>
+                        <p class="text-orange-500 font-medium">Director</p>
+                        <p class="text-slate-600 mt-4">With decades of experience in the IT retail industry, Mr. Vikas Singhal's vision has been instrumental in establishing Sigma as a household name for technology in Lucknow.</p>
+                    </div>
+                    <!-- Amit Singhal -->
+                    <div class="bg-white p-8 rounded-lg shadow-md flex flex-col items-center">
+                        <img src="amit-singhal.png" alt="Mr. Amit Singhal" class="w-40 h-40 rounded-full mb-4 object-cover border-4 border-orange-200" onerror="this.src='https://placehold.co/160x160/e2e8f0/333?text=A.S.'">
+                        <h3 class="text-2xl font-semibold text-slate-800">Mr. Amit Singhal</h3>
+                        <p class="text-orange-500 font-medium">Director</p>
+                        <p class="text-slate-600 mt-4">Mr. Amit Singhal's focus on operational excellence and customer satisfaction ensures that every customer receives the best products and service at Sigma.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Why Choose Us -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl font-bold mb-12">Why Choose Us?</h2>
+                 <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-8 rounded-lg shadow-inner">
+                        <i data-lucide="shield-check" class="mx-auto h-12 w-12 text-orange-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Authorized Retailer</h3>
+                        <p class="text-slate-600">We are an authorized partner for all major brands, ensuring genuine products and warranties.</p>
+                    </div>
+                     <div class="bg-slate-50 p-8 rounded-lg shadow-inner">
+                        <i data-lucide="users" class="mx-auto h-12 w-12 text-orange-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Expert Staff</h3>
+                        <p class="text-slate-600">Our team is professionally trained to help you make the best choice for your tech needs.</p>
+                    </div>
+                     <div class="bg-slate-50 p-8 rounded-lg shadow-inner">
+                        <i data-lucide="thumbs-up" class="mx-auto h-12 w-12 text-orange-500 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Unmatched Service</h3>
+                        <p class="text-slate-600">We provide excellent after-sales support to ensure you are satisfied with your purchase.</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- Contact & Support Section -->
+        <section id="contact" class="py-20 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">Contact & Support</h2>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-6">Send us a Message</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="name" class="block mb-2 font-medium">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full p-3 border border-slate-300 rounded-lg" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block mb-2 font-medium">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full p-3 border border-slate-300 rounded-lg" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="subject" class="block mb-2 font-medium">Inquiry Type</label>
+                                <select id="subject" name="subject" class="w-full p-3 border border-slate-300 rounded-lg bg-white">
+                                    <option>General Inquiry</option>
+                                    <option>Product Question</option>
+                                    <option>Customer Support</option>
+                                    <option>Feedback</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block mb-2 font-medium">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full p-3 border border-slate-300 rounded-lg" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Submit Inquiry</button>
+                        </form>
+                         <div id="form-message" class="mt-4 text-center"></div>
+                    </div>
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-4">Visit Us</h3>
+                            <p class="text-lg flex items-start">
+                                <i data-lucide="map-pin" class="h-6 w-6 mr-3 mt-1 text-orange-500"></i>
+                                <span>Hazratganj | Wave Mall | OneAwadh Mall | Patrakarpuram<br>Lucknow, Uttar Pradesh, India. 226001</span>
+                            </p>
+                        </div>
+                         <div>
+                            <h3 class="text-2xl font-semibold mb-4">Contact Details</h3>
+                            <p class="text-lg flex items-center mb-2">
+                                <i data-lucide="phone" class="h-6 w-6 mr-3 text-orange-500"></i>
+                                <span>(+91) 9307082011</span>
+                            </p>
+                            <p class="text-lg flex items-center">
+                               <i data-lucide="mail" class="h-6 w-6 mr-3 text-orange-500"></i>
+                                <span>crm@SigmaLucknow.com</span>
+                            </p>
+                        </div>
+                        <div>
+                           <!-- Embedded Map -->
+                           <div class="h-64 rounded-lg overflow-hidden shadow-lg">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.743153549725!2d80.9433436150435!3d26.84824398315573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd09c1186f7d%3A0x1d989934751759cf!2sHazratganj%2C%2c%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1678886432109!5m2!1sen!2sin" 
+                                    width="100%" 
+                                    height="100%" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Sigma IT Superstore</h3>
+                    <p class="text-slate-400">Your trusted partner for the latest in technology since 1995. Serving Lucknow with pride.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-slate-400 hover:text-white">Home</a></li>
+                        <li><a href="#products" class="text-slate-400 hover:text-white">Products</a></li>
+                        <li><a href="#about" class="text-slate-400 hover:text-white">About Us</a></li>
+                        <li><a href="#directors" class="text-slate-400 hover:text-white">Directors</a></li>
+                        <li><a href="#contact" class="text-slate-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Connect With Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-white"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-white"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-slate-700 text-center text-slate-500 text-sm">
+                <p>&copy; 2024 Sigma IT Superstore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    // Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Product Data
+    const products = [
+        // Laptops
+        { name: 'HP Spectre x360 14', category: 'laptop', brand: 'HP', spec: 'Intel Core Ultra 7, 16GB RAM, 1TB SSD', image: 'hp-spectre-x360.png' },
+        { name: 'Dell XPS 15', category: 'laptop', brand: 'Dell', spec: 'Intel Core i9, 32GB RAM, 1TB SSD, RTX 4070', image: 'dell-xps-15.png' },
+        { name: 'Lenovo Yoga 9i', category: 'laptop', brand: 'Lenovo', spec: 'Intel Core Ultra 7, 16GB RAM, 1TB SSD', image: 'lenovo-yoga-9i.png' },
+        { name: 'ASUS ROG Zephyrus G16', category: 'laptop', brand: 'ASUS', spec: 'Intel Core Ultra 9, 32GB RAM, RTX 4080', image: 'asus-rog-zephyrus-g16.png' },
+        { name: 'MSI Titan GT77', category: 'laptop', brand: 'MSI', spec: 'Intel Core i9, 64GB RAM, RTX 4090', image: 'msi-titan-gt77.png' },
+        { name: 'Acer Swift Go 14', category: 'laptop', brand: 'Acer', spec: 'AMD Ryzen 7, 16GB RAM, 512GB SSD', image: 'acer-swift-go-14.png' },
+        { name: 'Samsung Galaxy Book4 Ultra', category: 'laptop', brand: 'Samsung', spec: 'Intel Core Ultra 9, 32GB RAM, 1TB SSD', image: 'samsung-galaxy-book4-ultra.png' },
+        { name: 'HP Omen 16', category: 'laptop', brand: 'HP', spec: 'AMD Ryzen 9, 16GB RAM, RTX 4070', image: 'hp-omen-16.png' },
+        { name: 'Dell Alienware M18', category: 'laptop', brand: 'Dell', spec: 'Intel Core i9, 64GB RAM, RTX 4090', image: 'dell-alienware-m18.png' },
+        { name: 'Lenovo Legion Pro 7i', category: 'laptop', brand: 'Lenovo', spec: 'Intel Core i9, 32GB RAM, RTX 4080', image: 'lenovo-legion-pro-7i.png' },
+
+        // Mobiles
+        { name: 'Samsung Galaxy S24 Ultra', category: 'mobile', brand: 'Samsung', spec: '512GB, Titanium Gray, S Pen', image: 'samsung-s24-ultra.png' },
+        { name: 'Apple iPhone 15 Pro', category: 'mobile', brand: 'Apple', spec: '256GB, Natural Titanium', image: 'apple-iphone-15-pro.png' },
+        { name: 'Google Pixel 8 Pro', category: 'mobile', brand: 'Google', spec: '256GB, Obsidian', image: 'google-pixel-8-pro.png' },
+        { name: 'Samsung Galaxy Z Fold 5', category: 'mobile', brand: 'Samsung', spec: '512GB, Phantom Black', image: 'samsung-galaxy-z-fold-5.png' },
+        { name: 'ASUS ROG Phone 8 Pro', category: 'mobile', brand: 'ASUS', spec: 'Gaming Phone, 512GB', image: 'asus-rog-phone-8.png' },
+
+        // Printers
+        { name: 'HP Smart Tank 580', category: 'printer', brand: 'HP', spec: 'All-in-One WiFi Colour Printer', image: 'hp-smart-tank-580.png' },
+        { name: 'Canon PIXMA G3000', category: 'printer', brand: 'Canon', spec: 'All-in-One WiFi Ink Tank Printer', image: 'canon-pixma-g3000.png' },
+        { name: 'Epson EcoTank L3250', category: 'printer', brand: 'Epson', spec: 'A4 Wi-Fi All-in-One Ink Tank', image: 'epson-ecotank-l3250.png' },
+        { name: 'Brother DCP-L2520D', category: 'printer', brand: 'Brother', spec: 'Monochrome Laser Printer', image: 'brother-dcp-l2520d.png' },
+        
+        // Accessories
+        { name: 'Logitech MX Master 3S Mouse', category: 'accessory', brand: 'Logitech', spec: 'Wireless Performance Mouse', image: 'logitech-mx-master-3s.png' },
+        { name: 'Samsung Odyssey Neo G9', category: 'accessory', brand: 'Samsung', spec: '49-inch Curved Gaming Monitor', image: 'samsung-odyssey-neo-g9.png' },
+        { name: 'HP M27f Monitor', category: 'accessory', brand: 'HP', spec: '27-inch FHD IPS Monitor', image: 'hp-m27f-monitor.png' },
+        { name: 'Dell UltraSharp U2723QE', category: 'accessory', brand: 'Dell', spec: '27-inch 4K UHD Monitor', image: 'dell-ultrasharp-u2723qe.png' },
+        { name: 'Razer BlackWidow V4 Pro', category: 'accessory', brand: 'Razer', spec: 'Mechanical Gaming Keyboard', image: 'razer-blackwidow-v4.png' },
+        { name: 'Sony WH-1000XM5 Headphones', category: 'accessory', brand: 'Sony', spec: 'Noise Cancelling Wireless Headphones', image: 'sony-wh-1000xm5.png' }
+    ];
+
+    // Product Filtering Logic
+    const productGrid = document.getElementById('product-grid');
+    const categoryFilterButtons = document.querySelectorAll('.filter-btn');
+    const brandFilterButtons = document.querySelectorAll('.brand-filter-btn');
+    
+    let activeCategory = 'all';
+    let activeBrand = 'all';
+
+    const displayProducts = () => {
+        productGrid.innerHTML = '';
+        
+        const filteredProducts = products.filter(product => {
+            const categoryMatch = activeCategory === 'all' || product.category === activeCategory;
+            const brandMatch = activeBrand === 'all' || product.brand === activeBrand;
+            return categoryMatch && brandMatch;
+        });
+
+        if (filteredProducts.length === 0) {
+            productGrid.innerHTML = `<p class="col-span-full text-center text-slate-500">No products found for the selected filters.</p>`;
+            return;
+        }
+
+        filteredProducts.forEach(product => {
+            const productCard = `
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition-transform duration-300" data-category="${product.category}">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/400x300/e2e8f0/333?text=${product.name.replace(/\s/g, '+')}'">
+                    <div class="p-6">
+                        <span class="text-sm text-slate-500">${product.brand}</span>
+                        <h3 class="text-xl font-semibold mb-2">${product.name}</h3>
+                        <p class="text-slate-600 mb-4">${product.spec}</p>
+                        <a href="#contact" class="inline-block bg-slate-200 text-slate-800 font-semibold py-2 px-4 rounded-full hover:bg-orange-500 hover:text-white transition duration-300">Inquire Now</a>
+                    </div>
+                </div>
+            `;
+            productGrid.innerHTML += productCard;
+        });
+    };
+
+    categoryFilterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            categoryFilterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            activeCategory = button.dataset.filter;
+            displayProducts();
+        });
+    });
+
+    brandFilterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            brandFilterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            activeBrand = button.dataset.brand;
+            displayProducts();
+        });
+    });
+
+
+    // Style for active filter buttons
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .filter-btn, .brand-filter-btn {
+            padding: 0.5rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 500;
+            color: #475569;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .filter-btn.active, .filter-btn:hover,
+        .brand-filter-btn.active, .brand-filter-btn:hover {
+            background-color: #F97316;
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Initial product display
+    displayProducts();
+
+    // Contact Form Submission
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        formMessage.textContent = 'Thank you for your message! We will get back to you shortly.';
+        formMessage.className = 'mt-4 text-center text-green-600 font-semibold';
+        contactForm.reset();
+        setTimeout(() => {
+            formMessage.textContent = '';
+        }, 5000);
+    });
+
+</script>
+</body>
+</html>
+
